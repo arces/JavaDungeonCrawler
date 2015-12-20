@@ -13,7 +13,7 @@ public final class Battle {
 			
 			if (action.equals("h")){
 			
-				if(player.gotPotions()>0){
+				if(player.getPotions()>0){
 				player.heal();}
 				
 				else {

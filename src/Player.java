@@ -20,7 +20,7 @@ public class Player {
 	
 	public Player(String namez, String descriptionz, int maxHitPointsz, int minDamagez, int maxDamagez,
 			int numPotionsz, int levelz) {
-		name = name;
+		name = namez;
 		description = descriptionz;
 		maxHitPoints = maxHitPointsz;
 		minDamage = minDamagez;
@@ -54,7 +54,7 @@ public class Player {
 		return description;
 	}
 	
-	public int gotPotions(){
+	public int getPotions(){
 		return numPotions;
 	}
 	
@@ -68,7 +68,12 @@ public class Player {
 	}
 	public void heal(){
 		if(numPotions>0){
-			hitPoints = hitPoints + 99999; //NEEDS TO BE DECIDED ON LATER!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+			if(hitPoints+50>=100){
+				hitPoints=100;
+			}else {
+				hitPoints = hitPoints + 50; //Heals for 50
+			}
 		}
 	}
 	

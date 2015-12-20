@@ -1,4 +1,6 @@
 public interface Monster {
+    int hp=100;
+    int level=0;
 //attack
 int getAttack();
 
@@ -24,6 +26,9 @@ String getAttackName();
 //Returns if HP is > 0
 boolean isAlive();
 
+
 //Sets health
 void setHitPoints(int hp);
+
+    String getDescription();
 }
